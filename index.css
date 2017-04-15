@@ -1,4 +1,5 @@
 #sideways a {
+    position:absolute;
     left: -80px;
     transition: 0.3s;
     padding: 15px;
@@ -7,4 +8,21 @@
     font-size: 20px;
     border-radius: 0 5px 5px 0;
 }
+#sideways a:hover {
+    left: 0;
+}
 
+#all {
+    top: 140px;
+    background-color: #4CAF50;
+}
+
+#active {
+    top: 200px;
+    background-color: #2196F3;
+}
+
+#complete {
+    top: 260px;
+    background-color: #f44336;
+}
