@@ -9,24 +9,28 @@
     border-radius: 0 5px 5px 0;
 }
 #sideways a:hover {
-    left: 0;
+	left: 0;
 }
 
 #all {
-    top: 140px;
-    background-color: #4CAF50;
+	top: 140px;
+	background-color: #4CAF50;
 }
 
 #active {
-    top: 200px;
-    background-color: #2196F3;
+	top: 200px;
+	background-color: #2196F3;
 }
 
 #complete {
-    top: 260px;
-    background-color: #f44336;
+	top: 260px;
+	background-color: #f44336;
 }
 #task {
 	margin-left:80px;
 	margin-top:40px;
+}
+.done-true {
+	text-decoration: line-through;
+	color: grey;
 }
