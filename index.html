@@ -8,7 +8,7 @@
 	</head>
 	<body ng-app="app">
 		<h1>Todo List</h1>
-		<div ng-controller="todoList">
+		<div ng-controller="todoCtrl as todoList">
 			<form ng-submit="todoList.addTodo()">
 				<input type="text" name="itodo" ng-model="todoList.todoText" placeholder="Add new here">
 				<input class="btn-primary" type="submit" value="add">
@@ -19,8 +19,7 @@
 				<a href="#" id="complete">Complete</a>
 			</div>
 			<div id="task">
-				<!--<span>{{todoList.remaining()}} of
-	    {{todoList.todos.length}} left</span>-->
+				<span>{{todoList.remaining()}} of {{todoList.todos.length}} left</span>
 				<ul class="unstyled">
 					<li ng-repeat="todo in todoList.todos">
 						<label class="checkbox">

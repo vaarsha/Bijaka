@@ -1,12 +1,10 @@
-angular.module('app', []).controller('todoList', function() {
-        var todList = this;
-        todList.todos = [
-          {text:'learn AngularJS', done:true},
-          {text:'build an AngularJS app', done:false}];
+angular.module('app', []).controller('todoCtrl', function() {
+        var todoList = this;
+        todoList.todos = [];
      
-        todList.addTodo = function() {
-          todList.todos.push({text:todoList.todoText, done:false});
-          todList.todoText = '';
+        todoList.addTodo = function() {
+          todoList.todos.push({text:todoList.todoText, done:false});
+          todoList.todoText = '';
         };
      
         todoList.remaining = function() {
