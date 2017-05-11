@@ -10,7 +10,7 @@
 		<h1>Todo List</h1>
 		<div ng-controller="todoCtrl as todoList">
 			<form ng-submit="todoList.addTodo()">
-				<input type="text" name="itodo" ng-model="todoList.todoText" placeholder="Add new here">
+				<input type="text" name="itodo" ng-model="todoList.todoText" placeholder="Add new here" required>
 				<input class="btn-primary" type="submit" value="add">
 			</form>
 			<div id="sideways">
