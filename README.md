@@ -1,5 +1,5 @@
 # Bijaka
 A simple todo list.
 
-Contributers List
+Contributers List<br>
 Varsha
