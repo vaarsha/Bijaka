@@ -1,14 +1,4 @@
 #sideways a {
-<<<<<<< HEAD
-	position:absolute;
-	left: -80px;
-	transition: 0.3s;
-	padding: 15px;
-	width: 100px;
-	text-decoration: none;
-	font-size: 20px;
-	border-radius: 0 5px 5px 0;
-=======
     position:absolute;
     left: -80px;
     transition: 0.3s;
@@ -25,7 +15,6 @@
 }
 #sideways a:nth-child(3) {
 	top: 380px;
->>>>>>> de81ada6459659c4267e1264695cce86de37544c
 }
 #sideways a:hover {
 	left: 0;
