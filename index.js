@@ -3,8 +3,14 @@ angular.module('app', []).controller('todoCtrl', function() {
         todoList.todos = [];
      
         todoList.addTodo = function() {
-          todoList.todos.push({text:todoList.todoText, done:false});
-          todoList.todoText = '';
+           if(todoList.todoText == '' ||todoList.todoText == undefined ){
+            alert('Write anything');
+            return false;
+           }
+           else{
+            todoList.todos.push({text:todoList.todoText, done:false});
+            todoList.todoText = '';
+           }
         };
      
         todoList.remaining = function() {
