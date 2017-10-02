@@ -15,12 +15,14 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-					<h1>Todo List</h1>
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
+					<h1 id="title">Todo List</h1>
 					<div ng-controller="todoCtrl as todoList">
 						<form ng-submit="todoList.addTodo()">
 							<input type="text" name="itodo" ng-model="todoList.todoText" placeholder="Add new here" class="form-control">
-							<span><input class="btn btn-primary" type="submit" value="add"></span>
+							<br>
+							<span><input class="btn btn-primary" type="submit" value="Add"></span>
 						</form>
 						<div id="task">
 							<span>{{todoList.remaining()}} of {{todoList.todos.length}} left</span>
@@ -35,6 +37,7 @@
 						</div>
 					</div>
 				</div>
+				<div class="col-md-4"></div>
 			</div>
 		</div>
 	</body>
