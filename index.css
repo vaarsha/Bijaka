@@ -6,10 +6,18 @@ body{
     left: -80px;
     transition: 0.3s;
     padding: 15px;
-    width: 100px;
+    width: 70px;
     text-decoration: none;
     font-size: 16px;
     border-radius: 0 5px 5px 0;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+#sideways a:nth-child(2) {
+	top: 230px;
+}
+#sideways a:nth-child(3) {
+	top: 380px;
 }
 #sideways a:hover {
 	left: 0;
@@ -44,3 +52,9 @@ body{
 	text-decoration: line-through;
 	color: grey;
 }
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0
+}
+

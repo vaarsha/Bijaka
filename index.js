@@ -20,6 +20,5 @@ angular.module('app', []).controller('todoCtrl', function() {
           });
           return count;
         };
-      });
-
+});
 
