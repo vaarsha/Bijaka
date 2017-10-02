@@ -4,7 +4,7 @@ angular.module('app', []).controller('todoCtrl', function() {
      
         todoList.addTodo = function() {
            if(todoList.todoText == '' ||todoList.todoText == undefined ){
-            alert('Write anything');
+            alert('Write something ,it should not be blank');
             return false;
            }
            else{

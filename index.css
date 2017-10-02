@@ -1,5 +1,7 @@
 body{
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	background: linear-gradient(to left, #834d9b, #d04ed6);
+	color: white;
 }
 #sideways a {
     position:absolute;
@@ -58,3 +60,13 @@ ul{
 	padding: 0
 }
 
+
+	  input[type=text] {
+       
+    border-color: red;
+    border-style: solid;
+    border-width: 1px;
+}
+input:hover {
+    border-color: blue;
+}
