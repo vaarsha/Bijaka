@@ -15,16 +15,16 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4"></div>
-				<div class="col-md-4">
+				
+				<div class="col-md-6 col-md-offset-3">
 					<h1 id="title">Todo List</h1>
 					<div ng-controller="todoCtrl as todoList">
 						<form ng-submit="todoList.addTodo()">
 							<input type="text" name="itodo" ng-model="todoList.todoText" placeholder="Add new here" class="form-control">
 							<br>
-							<span><input class="btn btn-primary" type="submit" value="Add"></span>
+							<span><input class="btn btn-danger" type="submit" value="Add"></span>
 						</form>
-						<div id="task">
+						<div id="task" align="center">
 							<span>{{todoList.remaining()}} of {{todoList.todos.length}} left</span>
 							<ul class="unstyled">
 								<li ng-repeat="todo in todoList.todos">
