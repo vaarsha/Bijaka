@@ -6,5 +6,6 @@ Varsha<br>
 Indrashish Ghosh<br>
 lucassoares<br>
 <a href ="https://github.com/kunalvishnoi"> kunal vishnoi </a>
+<a href ="https://github.com/NullSilence"> NullSilence </a>
 
 Note: Before contributing please read contributing.md page.
