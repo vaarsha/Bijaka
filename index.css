@@ -22,7 +22,7 @@ body{
 	top: 380px;
 }
 #sideways a:hover {
-	left: 0;
+	left: -40px;
 }
 
 #all {
