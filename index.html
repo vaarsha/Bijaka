@@ -25,7 +25,7 @@
 							<span><input class="btn btn-danger" type="submit" value="Add"></span>
 						</form>
 						<div id="task" align="center">
-							<span>{{todoList.remaining()}} of {{todoList.todos.length}} left</span>
+							<span id="count">{{todoList.remaining()}} of {{todoList.todos.length}} left</span>
 							<ul class="unstyled">
 								<li ng-repeat="todo in todoList.todos">
 									<label class="checkbox">
