@@ -29,9 +29,9 @@ app.directive('inputCheck', [function() {
         link: function(scope, elem, attrs) {
             $("input[type='checkbox']").change(function(){
                 if($(this).is(":checked")){
-                    $(this).parent().addClass("redBackground"); 
+                    $(this).parent().addClass("greyBg"); 
                 }else{
-                    $(this).parent().removeClass("redBackground");  
+                    $(this).parent().removeClass("greyBg");  
                 }
             });         
         }

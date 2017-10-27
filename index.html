@@ -72,7 +72,7 @@
 				<div id="task">					
 					<inputCheck>
 						<ol>
-							<li ng-repeat="todo in todoList.todos">
+							<li ng-repeat="todo in todoList.todos | orderBy:'done'">
 								<input type="checkbox" ng-model="todo.done" class="right" >
 								<span class="done-{{todo.done}}">{{todo.text}}</span>
 							</li>
