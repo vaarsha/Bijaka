@@ -1,0 +1,9 @@
+$(document).ready(function(){
+	$("input[type='checkbox']").change(function(){
+		if($(this).is(":checked")){
+			$(this).parent().addClass("redBackground"); 
+		}else{
+			$(this).parent().removeClass("redBackground");  
+		}
+	});
+});
