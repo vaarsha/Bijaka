@@ -1,44 +1,89 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Bijaka - A simple todo list</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.4/angular.min.js"></script>
-		<script src="index.js"></script>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="index.css">
-	</head>
-	<body ng-app="app">
-		<div id="sideways">
-			<a href="#" id="all">All</a>
-			<a href="#" id="active">Active</a>
-			<a href="#" id="complete">Complete</a>
-		</div>
+<html lang="en">
+<head>
+
+<!-- Basic Page Needs
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta charset="utf-8">
+	<title>Bijaka</title>
+	<meta name="description" content="A Simple Todo List">
+	<meta name="author" content="Varsha">
+
+<!-- Mobile Specific Metas
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- FONT
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+<!-- CSS
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="assets/css/normalize.css">
+	<link rel="stylesheet" href="assets/css/skeleton.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+
+<!-- Scripts
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.4/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="assets/scripts/index.js"></script>  
+	<script src="assets/scripts/style.js"></script>  
+
+<!-- Favicon
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+</head>
+<body ng-app="app">
+
+<!-- Primary Page Layout
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<div class="section hero center">
 		<div class="container">
 			<div class="row">
-				
-				<div class="col-md-6 col-md-offset-3">
-					<h1 id="title">Todo List</h1>
-					<div ng-controller="todoCtrl as todoList">
-						<form ng-submit="todoList.addTodo()">
-							<input type="text" name="itodo" ng-model="todoList.todoText" placeholder="Add new here" class="form-control">
-							<br>
-							<span><input class="btn btn-danger" type="submit" value="Add"></span>
-						</form>
-						<div id="task" align="center">
-							<span>{{todoList.remaining()}} of {{todoList.todos.length}} left</span>
-							<ul class="unstyled">
-								<li ng-repeat="todo in todoList.todos">
-									<label class="checkbox">
-										<input type="checkbox" ng-model="todo.done" >
-										<span class="done-{{todo.done}}">{{todo.text}}</span>
-									</label>
-								</li>
-							</ul>
+				<div class="twelve columns">
+					<img class="logo" src="assets/images/checklist.svg" style="width: 20rem;">
+				</div>              
+			</div>   
+			<h3 class="section-heading">A Simple Todo List</h3>      
+		</div>
+	</div>
+	<div class="section container">
+		<div class="row" ng-controller="todoCtrl as todoList">
+			<div class="twelve columns">
+				<h4 class="section-heading center">
+					<span>{{todoList.remaining()}} of {{todoList.todos.length}} left</span>
+				</h4>				
+			</div>
+			<div class="five columns">
+				<form ng-submit="todoList.addTodo()" class="inline">
+					<div class="row">
+						<div class="eight columns">
+							<input class="u-full-width" type="text" placeholder="Finish my superflous assignment" name="itodo" ng-model="todoList.todoText">
 						</div>
-					</div>
-				</div>
-				<div class="col-md-4"></div>
+						<div class="four columns">
+							<input class="button-primary" type="submit" value="Submit">	
+						</div>
+					</div>					
+				</form> 				
+			</div>
+			<div class="five columns">
+				<div id="task">					
+					<inputCheck>
+						<ol>
+							<li ng-repeat="todo in todoList.todos | orderBy:'done'">
+								<input type="checkbox" ng-model="todo.done" class="right" >
+								<span class="done-{{todo.done}}">{{todo.text}}</span>
+							</li>
+						</ol>						
+					</inputCheck>
+				</div> 					
 			</div>
 		</div>
-	</body>
+	</div>         
+
+<!-- End Document
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
 </html>
