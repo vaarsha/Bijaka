@@ -5,17 +5,29 @@
 	text-align: center;
 }
 #task{
-    overflow-y: scroll;
-    max-height: 200px;
+    overflow-y: auto;
+    max-height: 400px;
+
+	
 
 }
 .half-width{
 	width: 50%;
 	margin: 0 auto;	
 }
+img {
+    border: 0;
+    width: 100px !important;
+}
 
 ol{
 
+}
+input.button-primary
+{
+	 background-color: #5f9ea0 !important;
+	 color: #fff !important;
+	 
 }
 li{
     padding: 1rem;
@@ -23,11 +35,14 @@ li{
     font-size: 1.5rem;
     transition: background-color 0.25s ease-in-out;	
     border-radius: 0.2rem;
+	    background: #5f9ea0;
+    margin-bottom: 15px;
+    color: #fff;
 }
 li:hover{
-    background-color: #e6e6e6;
+    background-color: #5f9ea0;
     padding: 1rem;
-    margin: 0rem;	
+    /* margin: 0rem;	 */
 }
 
 input[type="checkbox"]{
